@@ -363,7 +363,7 @@ export default function TechnocoreApp() {
               did: identity.did,
               room: ROOM,
               introduction_sequence: state.intro?.seq ?? null,
-              contribution_url: state.contribution?.url ?? contributionUrl || null,
+              contribution_url: state.contribution?.url ?? (contributionUrl || null),
               contribution_proof: state.contribution?.proof ?? null
             }, null, 2)}</div>
           ) : <div className="notice">Create your DID first.</div>}
@@ -372,7 +372,7 @@ export default function TechnocoreApp() {
               did: identity?.did,
               room: ROOM,
               introduction_sequence: state.intro?.seq ?? null,
-              contribution_url: state.contribution?.url ?? contributionUrl || null
+              contribution_url: state.contribution?.url ?? (contributionUrl || null)
             }, null, 2))}>Copy evidence</button>
             <button className="secondary" onClick={readLobby} disabled={busy}>Read latest lobby</button>
             {identity && <button className="secondary" onClick={clearBrowserIdentity}>Clear local identity</button>}
