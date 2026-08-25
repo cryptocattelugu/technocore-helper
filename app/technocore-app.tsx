@@ -111,8 +111,16 @@ async function deriveAesKey(passphrase: string, salt: Uint8Array) {
     false,
     ["deriveKey"]
   );
+
+  const saltBuffer = new Uint8Array(salt).buffer;
+
   return crypto.subtle.deriveKey(
-    { name: "PBKDF2", hash: "SHA-256", iterations: 250000, salt },
+    {
+      name: "PBKDF2",
+      hash: "SHA-256",
+      iterations: 250000,
+      salt: saltBuffer,
+    },
     material,
     { name: "AES-GCM", length: 256 },
     false,
