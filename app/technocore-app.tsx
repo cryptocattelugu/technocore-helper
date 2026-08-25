@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ed25519 } from "@noble/ed25519";
+import * as ed25519 from "@noble/ed25519";
 
 const STORAGE_KEY = "technocore-helper-v1";
 const ROOM = "lobby";
