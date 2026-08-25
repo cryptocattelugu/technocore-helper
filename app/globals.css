@@ -35,3 +35,9 @@ textarea{min-height:110px;resize:vertical}
 .footer{margin-top:22px;color:#667183;font-size:12px;line-height:1.5}
 a{color:#cfd5df}
 @media(max-width:680px){.grid{grid-template-columns:1fr}.page{padding-top:18px}.card{padding:18px}}
+
+.grow{flex:1}.details{margin-top:16px;border-top:1px solid #262d38;padding-top:14px}.details summary{cursor:pointer;font-weight:700;color:#dbe1ea}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 15px}.chips span{font-size:12px;border:1px solid #303746;border-radius:999px;padding:6px 9px;color:#adb6c5;background:#0c1016}
+.preview{border:1px solid #303746;background:#0a0d12;border-radius:10px;padding:13px;margin:10px 0 14px;color:#cdd4df;line-height:1.55}
+
+.danger{border:1px solid #6f3d45!important;color:#ffbec6!important}
